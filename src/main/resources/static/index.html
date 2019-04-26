@@ -82,23 +82,22 @@
     昵称：<input type="text" id="nickname" class="easyui-textbox" style="width: 150px"/>
     发送给：<input type="text" id="toAgent" class="easyui-textbox" style="width: 150px"/>
     <a id="btnLink" href="javascript:void(0)" class="easyui-linkbutton c1">开始聊天</a></p>
-<div data-options="region:'center'" class="easyui-panel" style="width: 50%;height:500px;  padding: 5px;"
+<div data-options="region:'center'" class="easyui-panel" style="width: 90%;height:500px;  padding: 10px;"
      id="chatRecord">
     <ul class="chatDialog-main clearfix" id="chatZone">
 
 
     </ul>
 </div>
-<div class="easyui-panel" style="width: 50%; padding: 5px;">
+<div class="easyui-panel" style="width: 90%; padding: 10px;">
     <table height="100%" cellpadding="0px" cellspacing="0px">
         <tr>
             <td height="100px">
                 <table cellpadding="5px" cellspacing="0" border="0">
                     <tr style="vertical-align: middle;">
-                        <td>
-													<textarea
-                                                            style="width: 600px; height: 100px; overflow: auto; vertical-align: middle;"
-                                                            id="txtMessage" name="txtMessage"></textarea>
+                        <td><textarea
+                                style="width: 600px; height: 50px; overflow: auto; vertical-align: middle;"
+                                id="txtMessage" name="txtMessage"></textarea>
                         </td>
                         <td style="width: 6px"></td>
                         <td style="vertical-align: middle;">
@@ -154,13 +153,13 @@
             }
         });
         $("#btnSend").click(function () {
-            var productorId = $("#linkAgent").val();
+            var producerId = $("#linkAgent").val();
             var msg = $("#txtMessage").val();
-            var comsumerId = $("#toAgent").val();
+            var consumerId = $("#toAgent").val();
             var obj = new Object();
-            obj.productorId = productorId;
+            obj.producerId = producerId;
             obj.message = msg;
-            obj.comsumerId = comsumerId;
+            obj.consumerId = consumerId;
             obj.nickname = nickname;
             var json = JSON.stringify(obj);
             var result = websocket.send(json);

@@ -12,11 +12,11 @@ public class MessageVo {
     /**
      * 消息生产者ID
      */
-    private String productorId;
+    private String producerId;
     /**
      * 消息消费者者ID
      */
-    private String comsumerId;
+    private String consumerId;
     /**
      * 消息
      */
